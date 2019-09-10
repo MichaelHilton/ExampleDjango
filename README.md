@@ -31,5 +31,10 @@ This repo is ready to run. For reference, the following steps were the ones we f
 * ./manage.py runserver 8100
 
 
+# Extra Resources:
+The Django website has some great documentation on these topics. For further reading we recommend:
+* https://docs.djangoproject.com/en/2.2/intro/tutorial01/
+* https://docs.djangoproject.com/en/2.2/topics/db/
+
 
 
