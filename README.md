@@ -1,4 +1,3 @@
-
 # ExampleDjango
 This repo has the code for the inclass exercise introducing Django apps and the ORM.
 To run the code, you should follow these steps from the command line: 
