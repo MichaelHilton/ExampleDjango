@@ -51,19 +51,19 @@ steps:
     python manage.py test --testrunner xmlrunner.extra.djangotestrunner.XMLTestRunner --no-input
   displayName: 'Run tests'
 
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: '$(Build.SourcesDirectory)'
-    includeRootFolder: false
-    archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/Application$(Build.BuildId).zip'
-    replaceExistingArchive: true
-    verbose: # (no value); this input is optional
-  displayName: 'Build Zip'
-- task: AzureWebApp@1
-  inputs:
-    azureSubscription: 'Free Trial(a3ecd3f4-f98b-4735-9414-a9430e185e7b)'
-    appType: 'webAppLinux'
-    appName: 'hiltonTodoList'
-    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
-    runtimeStack: 'PYTHON|2.7'
+# - task: ArchiveFiles@2
+#   inputs:
+#     rootFolderOrFile: '$(Build.SourcesDirectory)'
+#     includeRootFolder: false
+#     archiveType: 'zip'
+#     archiveFile: '$(Build.ArtifactStagingDirectory)/Application$(Build.BuildId).zip'
+#     replaceExistingArchive: true
+#     verbose: # (no value); this input is optional
+#   displayName: 'Build Zip'
+# - task: AzureWebApp@1
+#   inputs:
+#     azureSubscription: 'Free Trial(a3ecd3f4-f98b-4735-9414-a9430e185e7b)'
+#     appType: 'webAppLinux'
+#     appName: 'hiltonTodoList'
+#     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+#     runtimeStack: 'PYTHON|2.7'
