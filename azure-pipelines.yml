@@ -54,7 +54,9 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'git push https://deployHiltonWebappsExample:deploywebapps437@hiltontodolist.scm.azurewebsites.net:443/hiltonTodoList.git hw4_deployment:master'
+    script: |
+      'git checkout hw4_deployment'
+      'git push https://deployHiltonWebappsExample:deploywebapps437@hiltontodolist.scm.azurewebsites.net:443/hiltonTodoList.git hw4_deployment:master'
 
 # - task: FtpUpload@2
 #   inputs:
