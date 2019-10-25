@@ -59,11 +59,11 @@ steps:
     password: 'XktAeWk20hsv8iA1nQZaJZTSHrQsavWCELFNkCu7jKd69sscTPbfRw6ouLtF'
     rootDirectory: 
     filePatterns: '**'
-    remoteDirectory: '/upload/$(Build.BuildId)/'
+    remoteDirectory: '/site/wwwroot/'
     clean: false
     cleanContents: false
     preservePaths: false
-    trustSSL: false
+    trustSSL: true
 # - task: ArchiveFiles@2
 #   inputs:
 #     rootFolderOrFile: '$(Build.SourcesDirectory)'
