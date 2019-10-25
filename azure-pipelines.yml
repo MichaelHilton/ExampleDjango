@@ -57,7 +57,7 @@ steps:
     serverUrl: 'ftps://waws-prod-ch1-029dr.ftp.azurewebsites.windows.net'
     username: 'hiltonTodoList\$hiltonTodoList'
     password: 'XktAeWk20hsv8iA1nQZaJZTSHrQsavWCELFNkCu7jKd69sscTPbfRw6ouLtF'
-    rootDirectory: 
+    rootDirectory: './'
     filePatterns: '**'
     remoteDirectory: '/site/wwwroot/'
     clean: false
