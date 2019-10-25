@@ -51,19 +51,24 @@ steps:
     python manage.py test --testrunner xmlrunner.extra.djangotestrunner.XMLTestRunner --no-input
   displayName: 'Run tests'
 
-- task: FtpUpload@2
+
+- task: CmdLine@2
   inputs:
-    credentialsOption: 'inputs'
-    serverUrl: 'ftps://waws-prod-ch1-029dr.ftp.azurewebsites.windows.net'
-    username: 'hiltonTodoList\$hiltonTodoList'
-    password: 'XktAeWk20hsv8iA1nQZaJZTSHrQsavWCELFNkCu7jKd69sscTPbfRw6ouLtF'
-    rootDirectory: './'
-    filePatterns: '**'
-    remoteDirectory: '/site/wwwroot/'
-    clean: false
-    cleanContents: false
-    preservePaths: false
-    trustSSL: true
+    script: 'git push https://deployHiltonWebappsExample: deploywebapps437@hiltontodolist.scm.azurewebsites.net:443/hiltonTodoList.git --all'
+
+# - task: FtpUpload@2
+#   inputs:
+#     credentialsOption: 'inputs'
+#     serverUrl: 'ftps://waws-prod-ch1-029dr.ftp.azurewebsites.windows.net'
+#     username: 'hiltonTodoList\$hiltonTodoList'
+#     password: 'XktAeWk20hsv8iA1nQZaJZTSHrQsavWCELFNkCu7jKd69sscTPbfRw6ouLtF'
+#     rootDirectory: './'
+#     filePatterns: '**'
+#     remoteDirectory: '/site/wwwroot/'
+#     clean: false
+#     cleanContents: false
+#     preservePaths: false
+#     trustSSL: true
 # - task: ArchiveFiles@2
 #   inputs:
 #     rootFolderOrFile: '$(Build.SourcesDirectory)'
