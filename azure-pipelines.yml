@@ -51,12 +51,26 @@ steps:
     python manage.py test --testrunner xmlrunner.extra.djangotestrunner.XMLTestRunner --no-input
   displayName: 'Run tests'
 
+- script: |
+    git checkout hw4_deployment
+    git push https://deployHiltonWebappsExample:deploywebapps437@hiltontodolist.scm.azurewebsites.net:443/hiltonTodoList.git hw4_deployment:master
+  displayName: 'Push to Azure'
 
-- task: CmdLine@2
-  inputs:
-    script: |
-      'git checkout hw4_deployment'
-      'git push https://deployHiltonWebappsExample:deploywebapps437@hiltontodolist.scm.azurewebsites.net:443/hiltonTodoList.git hw4_deployment:master'
+
+
+# - task: Bash@3
+#   inputs:
+#     targetType: 'inline'
+#     script: |
+#       # Write your commands here
+      
+#       git checkout hw4_deployment
+#       git push https://deployHiltonWebappsExample:deploywebapps437@hiltontodolist.scm.azurewebsites.net:443/hiltonTodoList.git hw4_deployment:master
+# - task: CmdLine@2
+#   inputs:
+#     script: |
+#       'git checkout hw4_deployment'
+#       'git push https://deployHiltonWebappsExample:deploywebapps437@hiltontodolist.scm.azurewebsites.net:443/hiltonTodoList.git hw4_deployment:master'
 
 # - task: FtpUpload@2
 #   inputs:
