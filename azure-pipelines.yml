@@ -54,9 +54,9 @@ steps:
 - task: FtpUpload@2
   inputs:
     credentialsOption: 'inputs'
-    serverUrl: 'ftp://waws-prod-ch1-029.ftp.azurewebsites.windows.net'
-    username: 'deployHiltonWebappsExample'
-    password: 'deploywebapps437'
+    serverUrl: 'ftps://waws-prod-ch1-029dr.ftp.azurewebsites.windows.net/site/wwwroot'
+    username: 'hiltonTodoList\$hiltonTodoList'
+    password: 'XktAeWk20hsv8iA1nQZaJZTSHrQsavWCELFNkCu7jKd69sscTPbfRw6ouLtF'
     rootDirectory: 
     filePatterns: '**'
     remoteDirectory: '/upload/$(Build.BuildId)/'
