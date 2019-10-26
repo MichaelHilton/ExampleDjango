@@ -53,7 +53,7 @@ steps:
 
 - script: |
     git checkout hw4_deployment
-    git push https://deployHiltonWebappsExample:deploywebapps437@hiltontodolist.scm.azurewebsites.net:443/hiltonTodoList.git hw4_deployment:master
+    git push https://deployHiltonWebappsExample:$(gitPassword)@hiltontodolist.scm.azurewebsites.net:443/hiltonTodoList.git hw4_deployment:master
   displayName: 'Push to Azure'
 
 
